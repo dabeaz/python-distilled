@@ -25,7 +25,7 @@ def print_matching(lines, substring):
 
 The following individuals have contributed errata:
 
-* Said Klundert
+* Said van de Klundert
 * David Dyck
 * Scythal
 
