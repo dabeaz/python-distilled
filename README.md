@@ -17,6 +17,9 @@ of `prefix`.
 
 * Section 1.8, pg. 15.  `['SYM', '123', '456.78']` should include the newline and be `['SYM', '123', '456.78\n']`
 
+* Section 1.10, pg. 17-18.  There is somewhat inconsistent use of variable names in this
+section.  The `names1` variable should be `s` and the `names2` variable should be `t`.
+
 * Section 1.15, pg. 26.  `print "Going away..."` should be `print("Going away...")`
 
 * Section 2.1, pg. 38. Typo mid-page should read "Tuple, list, set, and dictionary literals are written as follows:"
@@ -35,10 +38,25 @@ for n in nums:
     squares.append(n*n)
 ```
 
+* Section 2.15, pg. 55. The code example should use slicing `t[:1]` instead of indexing `t[0]`
+to avoid a possible `IndexError` exception.
+
+```
+comments = (t for t in lines if t[:1] == '#')   # All comments
+```
+
 * Section 4.8, pg. 88.  `compute_cost(prices, quantities)` should be `compute_cost(prices, units)`.
 
 * Section 5.8, pg. 106.  The docstring in the `factorial()` function should use `factorial(5)`
 instead of `factorial(6)` to get a result of 120.
+
+* Section 5.16, pg. 121.  The first function signature for `after()` should be changed
+to the following:
+
+```
+def after(seconds, func, /, *args, debug=False, **kwargs):
+    ...
+```
 
 * Section 6.4, pg. 145.   The code for `print_matching()` should be as follows:
 
@@ -49,6 +67,14 @@ def print_matching(lines, substring):
 	    print(substring)
 ```
 
+* Section 7.1, pg. 153.  An extra line should probably be added to the example to show the effect of mutation:
+
+```
+>>> names[1] = 'Tom'
+>>> names
+[ 'Paula', 'Tom', 'Lewis' ]
+>>>
+```
 
 * Section 7.3, pg. 156.  Missing right parenthesis on `b.withdraw(50.0)`.
 
@@ -98,9 +124,22 @@ def today(cls):
     return self
 ```
 
+* Section 7.23, pg. 201.  NOT a typo.  The `__new__()` method of a class is,
+in fact, properly defined as a `@staticmethod` even though it looks like it
+ought to be a class method.   This is strange, but you can see this in
+examples where `__new__()` is invoked directly.  For example, `a = Account.__new__(Account)`
+on the previous page. Here, `Account` is passed directly as the `cls` argument as
+would be required with a `@staticmethod`.
+
 * Section 7.26, pg. 208.  Typo (missing "that").  "A proxy is an object that exposes..."
 
 * Section 7.28, pg. 212.   `del f.owner` should be `del a.owner` in example.
+
+* Section 8.7, pg. 234.  It should be noted that the `PYTHONPATH` environment variable is a
+colon-separated list of paths.
+
+* Section 8.14, pg. 241.  Typo ("is" should be "if"). "For example, if your package
+looks like this:"
 
 * Section 9.3, pg. 250. `format(x, '<*10.2f')` should be `format(x, '*<10.2f')`.
 
@@ -113,6 +152,12 @@ def today(cls):
 * Section 9.9, pg. 264. `for filename in path.Path('dirname').glob('*.txt')` should be `for filename in pathlib.Path('dirname').glob('*.txt')`.
 
 * Section 9.15.9, pg. 279.   Typo, missing "to" in the sentence "Go to a directory with a collection of files and type the following:"
+
+* Section 9.15.12, pg. 281.  Typo in code comment ("one" should be "once").
+
+```
+# Configuration of logging (occurs once at program startup)
+```
 
 * Section 9.15.15, pg. 283. There is an extra `return pathname.stat().st_size` statement that
 can be removed (because there is a `return` statement right above it).
@@ -166,5 +211,9 @@ The following individuals have contributed errata:
 * @michrag
 * Sam Kramer
 * @wildekat
+* Shivam Parke
+* Olivia Nelson
+* @occoder
+* @yatcui
 
 
