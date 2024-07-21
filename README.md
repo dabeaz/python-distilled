@@ -186,6 +186,8 @@ b'\x00{\x00\x00\x01\xc8?\x9dp\xa4@\x91\xeb\x85'
 
 * Table 10.10, pg, 313.  The `s.append(x)` method should be deleted.
 
+* 5.15 Higher-Order Functions, The 4rth example, when appending to the `funcs` list, wrong name is used (i.e `func.append`), it should be `funcs.append`.  
+
 ## Acknowledgements
 
 The following individuals have contributed errata:
