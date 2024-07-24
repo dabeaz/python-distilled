@@ -186,6 +186,9 @@ b'\x00{\x00\x00\x01\xc8?\x9dp\xa4@\x91\xeb\x85'
 
 * Table 10.10, pg, 313.  The `s.append(x)` method should be deleted.
 
+* 6.6 Applications of Enhanced
+Generators - there should be some import statement for the `@consumer` decorator, there is none currently. 
+
 ## Acknowledgements
 
 The following individuals have contributed errata:
