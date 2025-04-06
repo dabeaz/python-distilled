@@ -182,9 +182,9 @@ b'\x00{\x00\x00\x01\xc8?\x9dp\xa4@\x91\xeb\x85'
 
 * Table 10.9, pg. 311.    The description for `format_map()` should use "taken" instead of "taking".   "Formats `s` with substitutions taken from the mapping m."
 
-* Table 10.10, pg.  The description for `s + t` should read "Concatenation if `t` is a tuple."
+* Table 10.10, pg. 313. The description for `s + t` should read "Concatenation if `t` is a tuple."
 
-* Table 10.10, pg, 313.  The `s.append(x)` method should be deleted.
+* Table 10.10, pg. 313.  The `s.append(x)` method should be deleted.
 
 ## Acknowledgements
 
