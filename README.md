@@ -10,6 +10,8 @@ If you'd like to contribute, please submit an issue or pull request.
 
 * Table 1.2, pg. 5. Description for `round(a, [n])` should state that it rounds to the nearest multiple of 10 to the -nth power.
 
+* Section 1.6, pg. 9. 3rd example, 2nd line from below. “Clock” should be replaced with “Click”.
+
 * Section 1.6, pg. 10.  Comment in code sample mid-page should read `# g = 'Hello Cruel World'`.
 
 * Table 1.6, pg. 10. Description for `s.endswith(prefix [,start [,end]])` would be better if it used `suffix` instead
